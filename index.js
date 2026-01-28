@@ -139,7 +139,19 @@ const list=document.querySelector('.list');
 button.addEventListener('click',()=>{
     const nameValue=name.value;
     const li=document.createElement('li');
+    const deleteBtn=document.createElement('button');
+     
+    //providing text
+    deleteBtn.innerText="Delete";
     li.textContent=nameValue;
+    deleteBtn.addEventListener('click',()=>{
+        list.removeChild(li);
+    })
+
+    //appending the elements
+    li.appendChild(deleteBtn);
     list.appendChild(li);
+
+    //clearing text
     name.value="";
 })

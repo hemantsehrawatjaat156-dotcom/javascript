@@ -3,6 +3,13 @@
     background-color: lightblue;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
-    
+    cursor: pointer;   
+}
+.list{
+    width: 300px;
+    background-color: lightgrey;
+
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
 }
