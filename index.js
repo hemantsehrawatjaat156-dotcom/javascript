@@ -113,4 +113,33 @@
 // }
 // infinite();
 
-  
+  //////////////////////////////////////////////////////////////////////////////////////
+
+
+//   setTimeout(() => {
+//     alert("Hello, this is a delayed message!");
+//   }, 3*1000);
+
+// const timerid=setInterval(() => {
+//     console.log("This message is displayed every 2 seconds.");
+//     }, 1000);
+// console.log(timerid);
+
+// setTimeout(() => {
+//     clearInterval(timerid);
+// }, 10*1000);
+
+
+
+const name=document.querySelector('#name');
+const button=document.querySelector('button');
+const list=document.querySelector('.list');
+
+
+button.addEventListener('click',()=>{
+    const nameValue=name.value;
+    const li=document.createElement('li');
+    li.textContent=nameValue;
+    list.appendChild(li);
+    name.value="";
+})
