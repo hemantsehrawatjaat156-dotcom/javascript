@@ -1,4 +1,5 @@
-from more_itertools import first
+
+from typing import List
 
 
 arr = [3, 4, 7, 6, 5, 2]
@@ -76,3 +77,30 @@ for num in arr5:
         product *= num
 print("Count of odd numbers:", count)
 print("Product of odd numbers:", product)
+
+# find maximum and second maximum number in an array
+
+arr6 =    [12, 15, 7, 10, 22, 9]
+max_num = arr6[0]
+for num in arr6:
+    if num > max_num:
+        max_num = num
+print("Maximum number in the array:", max_num)
+second_max = float('-inf')
+for num in arr6:
+    if num > second_max and num < max_num:
+        second_max = num
+print("second largest number in the array:", second_max)
+
+def fizzBuzz(self, n: int) -> List[str]:
+        result = []
+        for i in range(1, n + 1):
+            if i % 3 == 0 and i % 5 == 0:
+                result.append("FizzBuzz")
+            elif i % 3 == 0:
+                result.append("Fizz")
+            elif i % 5 == 0:
+                result.append("Buzz")
+            else:
+                result.append(str(i))
+        return result
