@@ -204,32 +204,18 @@
 // }, 3*1000); //homework time
 
 //refactored code to avoid callback hell
+// function fini
 
-function finishHomework(callback){
-    console.log("Starting homework..");
+// promiseFunction(time,message){
+
+const p=new Promise((res,rej) => {
+    let done=false;
     setTimeout(() => {
-        console.log("Homework done!");
-        callback();
-    }, 2000);
-}
-
-function eatDinner(callback){
-    console.log("starting dinner..");
-    setTimeout(() => {
-        console.log("dinner done!");
-        callback();
-    }, 2000);
-}
-
-function goToPlayground(){
-    console.log("going to the playground!");
-    setTimeout(() => {
-        console.log("reached playground!");
-    }, 2000);
-}
-
-finishHomework(() => {
-    eatDinner(() => {
-        goToPlayground();
-    });
-});
+        if(done){
+            res("work is done");
+        }else{
+            rej("work not done");
+        }
+    }, 3*1000);
+})
+console.log(p);
