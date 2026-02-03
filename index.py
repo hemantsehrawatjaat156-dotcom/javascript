@@ -92,6 +92,9 @@ for num in arr6:
         second_max = num
 print("second largest number in the array:", second_max)
 
+# FizzBuzz problem
+class Solution:
+
 def fizzBuzz(self, n: int) -> List[str]:
         result = []
         for i in range(1, n + 1):
@@ -104,3 +107,14 @@ def fizzBuzz(self, n: int) -> List[str]:
             else:
                 result.append(str(i))
         return result
+
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False
+    
