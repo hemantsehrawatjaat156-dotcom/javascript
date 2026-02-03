@@ -218,4 +218,13 @@ const p=new Promise((res,rej) => {
         }
     }, 3*1000);
 })
+
+p.then((msg)=>{
+    console.log(msg)
+}).catch((err)=>{
+    console.log(err)
+}).finally(()=>{
+    console.log("finally block");
+})
+
 console.log(p);
