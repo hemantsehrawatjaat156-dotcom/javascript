@@ -130,28 +130,106 @@
 // }, 10*1000);
 
 
+// event loop
+// const name=document.querySelector('#name');
+// const button=document.querySelector('button');
+// const list=document.querySelector('.list');
 
-const name=document.querySelector('#name');
-const button=document.querySelector('button');
-const list=document.querySelector('.list');
 
-
-button.addEventListener('click',()=>{
-    const nameValue=name.value;
-    const li=document.createElement('li');
-    const deleteBtn=document.createElement('button');
+// button.addEventListener('click',()=>{
+//     const nameValue=name.value;
+//     const li=document.createElement('li');
+//     const deleteBtn=document.createElement('button');
      
-    //providing text
-    deleteBtn.innerText="Delete";
-    li.textContent=nameValue;
-    deleteBtn.addEventListener('click',()=>{
-        list.removeChild(li);
-    })
+//     //providing text
+//     deleteBtn.innerText="Delete";
+//     li.textContent=nameValue;
+//     deleteBtn.addEventListener('click',()=>{
+//         list.removeChild(li);
+//     })
 
-    //appending the elements
-    li.appendChild(deleteBtn);
-    list.appendChild(li);
+//     //appending the elements
+//     li.appendChild(deleteBtn);
+//     list.appendChild(li);
 
-    //clearing text
-    name.value="";
-})
+//     //clearing text
+//     name.value="";
+// })
+
+// callback function they are function passed as an argument to another function
+
+// function greet(){ //callback function
+//     console.log("Hello, student!");
+// }
+
+// function print(sample,num){ //higher order function
+//     sample()
+//     console.log("Total students are",num)
+// }
+// print(greet,45);
+
+
+// function greet(callback){ //higher order function
+//     setTimeout(() => {
+//         console.log("Hello, student!");    
+//         callback(45);
+//     }, 2*1000);
+// }
+
+
+// function print(num){ //callback function
+    
+//     console.log("Total students are",num)
+// }
+// greet(print);
+
+//complex example of callback hell
+// console.log("starting homework....");
+
+// setTimeout(() => {
+//     console.log("homework done!");
+//     console.log("starting dinner....");
+
+//     setTimeout(() => {
+//         console.log("dinner done!");
+//         console.log("Getting ready to go out....");
+
+//         setTimeout(() => {
+//             console.log("going to the playground");
+
+//         }, 5*1000); //after dinner
+
+//     }, 2*1000); //dinner time
+
+// }, 3*1000); //homework time
+
+//refactored code to avoid callback hell
+
+function finishHomework(callback){
+    console.log("Starting homework..");
+    setTimeout(() => {
+        console.log("Homework done!");
+        callback();
+    }, 2000);
+}
+
+function eatDinner(callback){
+    console.log("starting dinner..");
+    setTimeout(() => {
+        console.log("dinner done!");
+        callback();
+    }, 2000);
+}
+
+function goToPlayground(){
+    console.log("going to the playground!");
+    setTimeout(() => {
+        console.log("reached playground!");
+    }, 2000);
+}
+
+finishHomework(() => {
+    eatDinner(() => {
+        goToPlayground();
+    });
+});
