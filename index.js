@@ -208,23 +208,92 @@
 
 // promiseFunction(time,message){
 
-const p=new Promise((res,rej) => {
-    let done=false;
-    setTimeout(() => {
-        if(done){
-            res("work is done");
-        }else{
-            rej("work not done");
-        }
-    }, 3*1000);
-})
+// const p=new Promise((res,rej) => {
+//     let done=false;
+//     setTimeout(() => {
+//         if(done){
+//             res("work is done");
+//         }else{
+//             rej("work not done");
+//         } 
+//     }, 3*1000);
+// })
 
-p.then((msg)=>{
-    console.log(msg)
-}).catch((err)=>{
-    console.log(err)
-}).finally(()=>{
-    console.log("finally block");
-})
+// p.then((msg)=>{
+//     console.log(msg)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("finally block");
+// })
 
-console.log(p);
+// console.log(p);
+
+
+// function doHomework(){
+//     const p=new Promise((res,rej) => {
+//         setTimeout(() => {
+//             let done=true;
+//             if(done){
+//                 console.log("homework done!");
+//                 res(
+//                     "Homework Completed"
+//                 );
+//             }else{
+//                 rej("homework not done");
+//             }
+//         }, 3000);
+//     })
+
+//     return p;
+// }
+
+// function eatDinner(){
+//     const p=new Promise((res,rej) => {
+//         setTimeout(() => {
+//             let done=true;
+//             if(done){
+//                 console.log("dinner done!");
+//                 res(
+//                     "dinner Completed"
+//                 );
+//             }else{
+//                 rej("dinner not done");
+//             }
+//         }, 2000);
+//     })
+//     return p;
+// }
+
+// function goToPlayground(){
+//     const p=new Promise((res,rej) => {
+//         setTimeout(() => {
+//             let done=true;
+//             if(done){
+//                 console.log("went to  playground");
+//                 res(
+//                     "playground Completed"
+//                 );
+//             }else{
+//                 rej("not allowed");
+//             }
+//         }, 2000);
+//     })
+//     return p;
+// }
+
+// doHomework().then((msg)=>{
+//     console.log(msg);
+//     return eatDinner();
+// }).then((msg)=>{
+//     console.log(msg);
+//     return goToPlayground();
+// }).then((msg)=>{
+//     console.log(msg);
+// }).catch((err)=>{
+
+//     console.log(err);
+// }).finally(()=>{
+//     console.log("go to sleep");  
+// });
+
