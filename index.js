@@ -297,3 +297,80 @@
 //     console.log("go to sleep");  
 // });
 
+/////////////////////////////////////////////////////////////////////////
+
+
+// function orderFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//           console.log("food ordered");
+//           res()
+//         }, 2000);
+//     })
+// }
+
+// function prepareFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//           console.log("food prepared");
+//           res()
+//         }, 2000);
+//     })
+// }
+
+// function deliverFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//           console.log("food delivered");
+//           res()
+//         }, 2000);
+//     })
+// }
+
+// async function order(){
+//   await orderFood();
+//   await prepareFood();
+//   await deliverFood();     
+// }
+
+// order();  
+
+// console.log("First Line")
+// try{
+//   let sample=234
+//   console.log(sample)
+//   console.log("Line after sample")
+
+// }catch(e){
+//   console.log(e)
+// }
+// console.log("last line")
+
+// console.log("First Line")
+// try{
+//   let age=16
+//   if(age<18){
+//      throw new Error("You are not eligilbe to vote")
+// }
+
+// }catch(e){                
+//   console.warn(e)
+// }
+// console.log("last line")
+
+async funtion getData(){
+  try{
+    const response=await fetch("https://dummyjson.com/products")
+    if(response.ok===false){
+      throw new Error("Something went wrong")
+    }
+    const data=await response.json()
+    // console.log(data.product[0].tilte)
+    data.products.forEach((product)=>{
+    console.log(product.title)
+    })
+
+  }catch(err){
+    console.log(err)
+  }
+getData()
