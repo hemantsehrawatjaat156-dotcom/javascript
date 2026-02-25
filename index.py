@@ -235,13 +235,33 @@ from ast import List
 #             matrix[i][left] = num
 #             num += 1
 #         left += 1
+##################
 class Node:
-    def __init__(self, data=None, next=None):
-        self.data = data 
-        self.next = next
-
-class Linked_list:
-    def __init__(self, head=None):
-        self.head = head
+    def __init__(self,data=None,next=None):
+        self.data=data
+        self.next=next
         
-     
+class Linked_list:
+    def __init__(self,head=None):
+        self.head=head
+        
+        
+    def insert_at_Begining(self,data):
+        new_Node=Node(data,self.head)
+        self.head=new_Node
+
+
+class Node:
+    def __init__(self,data=None,next=None):
+        self.data=data
+        self.next=next     
+class Linked_list:
+    def __init__(self,head=None):
+        self.head=head    
+    def insert_at_Begining(self,data):
+        new_Node=Node(data,self.head)
+        self.head=new_Node
+        
+
+
+print("hello welcome my viewers")

@@ -358,19 +358,57 @@
 // }
 // console.log("last line")
 
-async funtion getData(){
-  try{
-    const response=await fetch("https://dummyjson.com/products")
-    if(response.ok===false){
-      throw new Error("Something went wrong")
-    }
-    const data=await response.json()
-    // console.log(data.product[0].tilte)
-    data.products.forEach((product)=>{
-    console.log(product.title)
-    })
+// async funtion getData(){
+//   try{
+//     const response=await fetch("https://dummyjson.com/products")
+//     if(response.ok===false){
+//       throw new Error("Something went wrong")
+//     }
+//     const data=await response.json()
+//     // console.log(data.product[0].tilte)
+//     data.products.forEach((product)=>{
+//     console.log(product.title)
+//     })
+  
+//   }catch(err){
+//     console.log(err)
+//   }
+// }
+// getData()
 
-  }catch(err){
-    console.log(err)
+// document.cookie="name=Alex;expires-Wed, 25 Feb 2026 23:59:59 UTC"
+// document.cookie="name=Alex;expires-Wed, 25 Feb 2026 23:59:59 UTC"
+
+// function generate(){
+//   // yield 1
+//   // yield 2
+//   // yield 3
+//   let index=25017343
+//   while(true){
+//     yield index
+//     index++
+//   }
+// }
+
+// const gen=generate()
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+function add(a){
+  return function(b){
+    return functon(c){
+      return a+b+c
+    }
   }
-getData()
+}
+
+const first=add(1)
+console.log(first)
+const second=first(2)
+console.log(second)
+console.log(second(3))
+
+console.log(add(1)(2)(3))
