@@ -236,32 +236,65 @@ from ast import List
 #             num += 1
 #         left += 1
 ##################
+# class Node:
+#     def __init__(self,data=None,next=None):
+#         self.data=data
+#         self.next=next
+        
+# class Linked_list:
+#     def __init__(self,head=None):
+#         self.head=head
+        
+        
+#     def insert_at_Begining(self,data):
+#         new_Node=Node(data,self.head)
+#         self.head=new_Node
+
+
+# class Node:
+#     def __init__(self,data=None,next=None):
+#         self.data=data
+#         self.next=next     
+# class Linked_list:
+#     def __init__(self,head=None):
+#         self.head=head    
+#     def insert_at_Begining(self,data):
+#         new_Node=Node(data,self.head)
+#         self.head=new_Node
+        
+
+
+# print("hello welcome my viewers")
+
 class Node:
-    def __init__(self,data=None,next=None):
-        self.data=data
-        self.next=next
-        
-class Linked_list:
-    def __init__(self,head=None):
-        self.head=head
-        
-        
-    def insert_at_Begining(self,data):
-        new_Node=Node(data,self.head)
-        self.head=new_Node
+    def __init__ (self, data = None, prev = None):
+        self.data = data
+        self.next = next
+        self.prev = prev
+
+class DLL:
+    def __init__ (self, head = None):
+        self.head = head
+
+    def inssert_at_Begining(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+
+        temp.next = new_node
+        new_node.perv = temp
+
+    def display(self):
+        temp = self.head
+        while temp.next:
+            print(temp.data , end=" <-> ")
+            temp = temp.next
+        print("None")
 
 
-class Node:
-    def __init__(self,data=None,next=None):
-        self.data=data
-        self.next=next     
-class Linked_list:
-    def __init__(self,head=None):
-        self.head=head    
-    def insert_at_Begining(self,data):
-        new_Node=Node(data,self.head)
-        self.head=new_Node
-        
-
-
-print("hello welcome my viewers")
+l1 = DLL()
+l1.inssert_at_Begining(100)
