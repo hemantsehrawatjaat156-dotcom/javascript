@@ -272,29 +272,4 @@ class Node:
         self.next = next
         self.prev = prev
 
-class DLL:
-    def __init__ (self, head = None):
-        self.head = head
-
-    def inssert_at_Begining(self, data):
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-            return
-        temp = self.head
-        while temp.next:
-            temp = temp.next
-
-        temp.next = new_node
-        new_node.perv = temp
-
-    def display(self):
-        temp = self.head
-        while temp.next:
-            print(temp.data , end=" <-> ")
-            temp = temp.next
-        print("None")
-
-
-l1 = DLL()
-l1.inssert_at_Begining(100)
+print("hello welcome my viewers")
