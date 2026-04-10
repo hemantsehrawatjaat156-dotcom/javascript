@@ -237,39 +237,57 @@ from ast import List
 #         left += 1
 ##################
 # class Node:
-#     def __init__(self,data=None,next=None):
-#         self.data=data
-#         self.next=next
+# #     def __init__(self,data=None,next=None):
+# #         self.data=data
+# #         self.next=next
         
-# class Linked_list:
-#     def __init__(self,head=None):
-#         self.head=head
+# # class Linked_list:
+# #     def __init__(self,head=None):
+# #         self.head=head
         
         
-#     def insert_at_Begining(self,data):
-#         new_Node=Node(data,self.head)
-#         self.head=new_Node
+# #     def insert_at_Begining(self,data):
+# #         new_Node=Node(data,self.head)
+# #         self.head=new_Node
 
+
+# # class Node:
+# #     def __init__(self,data=None,next=None):
+# #         self.data=data
+# #         self.next=next     
+# # class Linked_list:
+# #     def __init__(self,head=None):
+# #         self.head=head    
+# #     def insert_at_Begining(self,data):
+# #         new_Node=Node(data,self.head)
+# #         self.head=new_Node
+        
+
+
+# # print("hello welcome my viewers")
 
 # class Node:
-#     def __init__(self,data=None,next=None):
-#         self.data=data
-#         self.next=next     
-# class Linked_list:
-#     def __init__(self,head=None):
-#         self.head=head    
-#     def insert_at_Begining(self,data):
-#         new_Node=Node(data,self.head)
-#         self.head=new_Node
-        
-
+#     def __init__ (self, data = None, prev = None):
+#         self.data = data
+#         self.next = next
+#         self.prev = prev
 
 # print("hello welcome my viewers")
 
-class Node:
-    def __init__ (self, data = None, prev = None):
-        self.data = data
-        self.next = next
-        self.prev = prev
+# for i in range(1, 11):
+#     print(i)
 
-print("hello welcome my viewers")
+# while True:
+#     user_input = input("Enter a number (or 'exit' to quit): ")
+#     if user_input.lower() == 'exit':
+#         print("Exiting the program. Goodbye!")
+#         break
+#     try:
+#         number = int(user_input)
+#         print(f"You entered: {number}")
+#     except ValueError:
+#         print("Invalid input. Please enter a valid number or 'exit' to quit.")
+
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print("*", end="")
