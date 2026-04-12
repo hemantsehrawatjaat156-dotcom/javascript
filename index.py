@@ -288,6 +288,8 @@ from ast import List
 #     except ValueError:
 #         print("Invalid input. Please enter a valid number or 'exit' to quit.")
 
-for i in range(1, 6):
-    for j in range(1, i + 1):
-        print("*", end="")
+# for i in range(1, 6):
+#     for j in range(1, i + 1):
+#         print("*", end="")
+
+print("hello welcome my viewers")
