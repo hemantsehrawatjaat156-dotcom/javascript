@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import react  from '@vitejs/plugin-react'
 
  export default defineConfig({
   plugins: [react(
@@ -8,3 +8,12 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
     jsxImportSource: "@emotion/react",}
   )]
 })
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
