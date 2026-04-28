@@ -1,10 +1,14 @@
 import react from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
     return (
-        <div>
-            <h1>F3</h1> 
-            <p>This is F3</p>
-        </div>
+       <Router>
+            <Routes path="/"></Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+       </Router>
     )
 }
