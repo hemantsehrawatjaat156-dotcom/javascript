@@ -14,7 +14,7 @@ function Search() {
 
     return (
         <div>
-            <input type='text' placeholder='Search' value={search} onChange={(e) => setQuery(e.target.value)} />
+            <input type='text' placeholder='Search' value={search} onChange={(e) => setQuery(e.target.value)} /> 
         </div>
     );
 }   
