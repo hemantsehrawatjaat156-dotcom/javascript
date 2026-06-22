@@ -316,4 +316,8 @@ class dog:
 
     def back(self):
         print("woof!")
+
+dog1 = dog()
+print(dog1.species)
+dog1.back()
     
