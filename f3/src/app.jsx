@@ -6,7 +6,7 @@ import { UserContent } from './Usercontext';
 function App() {
     return (
        <Router>
-            <Routes path="/"></Routes>
+            <Routes path="/">
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
