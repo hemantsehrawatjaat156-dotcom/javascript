@@ -311,13 +311,30 @@ from ast import List
 #     for k in range(1, i + 1):
 #         print("*", end="")
 #     print()
-class dog:
-    species = "canine"
+# class dog:
+#     species = "canine"
 
-    def back(self):
-        print("woof!")
+#     def back(self):
+#         print("woof!")
 
-dog1 = dog()
-print(dog1.species)
-dog1.back()
+# dog1 = dog()
+# print(dog1.species)
+# dog1.back()
     
+class LibraryBook:
+    def __init__(self, title, author, book_id):
+        self.title = title
+        self.author = author
+        self.book_id = book_id
+
+    def display_info(self):
+        print("Book ID:", self.book_id)
+        print("Title:", self.title)
+        print("Author:", self.author)
+
+
+# Create an object
+book1 = LibraryBook("Python Programming", "John Smith", 101)
+
+# Call the method
+book1.display_info()
