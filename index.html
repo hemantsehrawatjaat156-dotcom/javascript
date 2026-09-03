@@ -1,20 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index.htmldt</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Duo | Joint Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body> 
-  <div class="can">
-    <div class="can2">
-      <input type="text" id="name" placeholder="Enter student name">
-        <button>sumbit student
-        </button>
-        <div class="list">
+<body class="bg-[#0D0E12] text-[#F1F5F9] font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-8 py-5 border-b border-gray-800 bg-[#0D0E12]/80 backdrop-blur fixed w-full z-50">
+    <div class="text-xl font-bold tracking-wide text-[#00F0FF]">DUO.<span class="text-[#8A2BE2]">DEV</span></div>
+    <div class="space-x-6 text-sm text-gray-400">
+      <a href="#hero" class="hover:text-white transition">Home</a>
+      <a href="#projects" class="hover:text-white transition">Team Projects</a>
+      <a href="#competitions" class="hover:text-white transition">Hackathons</a>
+      <a href="#achievements" class="hover:text-white transition">Individual Stats</a>
     </div>
-  </div>
-    <script src="index.js"></script>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 pb-20 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2 space-y-6">
+      <span class="text-xs font-semibold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3 py-1 rounded-full border border-[#00F0FF]/20">Engineering Duo</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Building & Competing Together</h1>
+      <p class="text-gray-400">Computer Science undergrads passionate about full-stack engineering, competitive programming, and building scalable tech.</p>
+    </div>
+    <div class="md:w-1/2 border-2 border-gray-800 rounded-2xl overflow-hidden bg-[#1A1C23] p-2 shadow-2xl">
+      <img src="https://via.placeholder.com/600x400" alt="Team Photo" class="rounded-xl w-full object-cover">
+    </div>
+  </section>
+
+  <!-- Team Projects -->
+  <section id="projects" class="py-16 px-8 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold mb-8 text-[#00F0FF]">Joint Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-[#1A1C23] border border-gray-800 p-6 rounded-xl hover:border-[#00F0FF]/50 transition">
+        <h3 class="text-xl font-semibold mb-2">Real-Time Collaboration Platform</h3>
+        <p class="text-gray-400 text-sm mb-4">A high-performance workspace app supporting shared code editing and low-latency communication.</p>
+        <div class="flex gap-2 text-xs font-mono text-[#8A2BE2]">
+          <span class="bg-[#8A2BE2]/10 px-2 py-1 rounded">React</span>
+          <span class="bg-[#8A2BE2]/10 px-2 py-1 rounded">Node.js</span>
+          <span class="bg-[#8A2BE2]/10 px-2 py-1 rounded">WebSockets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual Achievements Page Section -->
+  <section id="achievements" class="py-16 px-8 max-w-6xl mx-auto border-t border-gray-800">
+    <h2 class="text-2xl font-bold mb-8 text-[#8A2BE2]">Individual Achievements & Stats</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Member A -->
+      <div class="bg-[#1A1C23] border border-gray-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-lg font-bold">Friend A — Backend & DSA</h3>
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-[#0D0E12] p-3 rounded-lg border border-gray-800">
+            <div class="text-2xl font-bold text-[#00F0FF]">600+</div>
+            <div class="text-xs text-gray-400">DSA Solved</div>
+          </div>
+          <div class="bg-[#0D0E12] p-3 rounded-lg border border-gray-800">
+            <div class="text-2xl font-bold text-[#8A2BE2]">3.9</div>
+            <div class="text-xs text-gray-400">Current GPA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member B -->
+      <div class="bg-[#1A1C23] border border-gray-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-lg font-bold">Friend B — Frontend & Systems</h3>
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-[#0D0E12] p-3 rounded-lg border border-gray-800">
+            <div class="text-2xl font-bold text-[#00F0FF]">500+</div>
+            <div class="text-xs text-gray-400">DSA Solved</div>
+          </div>
+          <div class="bg-[#0D0E12] p-3 rounded-lg border border-gray-800">
+            <div class="text-2xl font-bold text-[#8A2BE2]">3.85</div>
+            <div class="text-xs text-gray-400">Current GPA</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
