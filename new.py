@@ -27,3 +27,10 @@
     #     print("It's a weekday in summer")
     # case 1 | 2 | 3 | 4 | 5 if month <= 10:
     #     print("It's a weekday in winter")
+
+# i = 6
+# while i > 1:
+#     print(i)
+#     if i == 4:
+#         continue
+#     i -= 1
