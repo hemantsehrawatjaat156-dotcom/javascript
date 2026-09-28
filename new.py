@@ -228,12 +228,24 @@ import random
 
 #////////////////////////////////////////////////////////////////////////
 
-arr = [1, 2, 3, 4, 1]
+# arr = [1, 2, 3, 4, 1]
+# # print("Array:", arr[0])
 
-for i in arr:
-    if arr[i] == arr[i]:
-        # arr.append(arr[i])
-        print(arr[i])
-    elif arr[i] != arr[i]:
-        arr.append(arr[i])
-        
+# ans = []
+# n = len(arr)
+# for i in arr:
+#     x = abs(i)
+#     if arr[x -1] < 0:
+#         ans.append(x)
+#     arr[x -1] *=  -1
+#     return ans
+# for i in ans:
+#     arr.remove(i)
+# print("Array after removing duplicates:", arr)
+    
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# for i in range(1, 5):
+#     for j in range(1, 5):
+#         print("*", end = "")
+#     print()
