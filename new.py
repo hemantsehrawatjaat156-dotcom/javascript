@@ -275,7 +275,45 @@ import random
 #         print(" ", end =" ")
 #     for j in range(1 + i):
 #         print("*", end = " ")
+#     print()
+
 
 #/////////////////////////////////////////////////////////////////////////////////////
 
+# n = 5
+# for i in range(n):
+#     for j in range(4-i):
+#         print(" ", end="")
+#     for j in range(i+1):
+#         print("*", end=" ")
+#     print()
 
+#//////////////////////////////////////////////////////////////////////////////////////
+#butterly star pattern
+
+# for i in range(4):
+#     for j in range(i+1):
+#         print("*", end=" ")
+#     for j in range(2*(4-i-1)):
+#         print(" ", end=" ")
+#     for j in range(i+1,0,-1):
+#         print("*",end=" ")
+#     print()
+
+#//////////////////////////////////////////////////////////////////////////////////
+
+
+# arr = [[1, 2, 3][4, 5, 6][7, 8, 9]]
+# rows, cols = len(arr), len(arr[0])
+
+# x, y, dx, dy = 0, 0, 1, 0
+# res = []
+
+# for _ in range(rows * cols):
+#     res.append(arr[x][y])
+#     arr[x][y] = "&"
+#     if not  0 <= x + dx < cols or not 0<= y+dy < rows or arr[x+dx] [y+dy] == "&":
+#         dx, dy = -dy, dx
+#     x += dx
+#     y += dy
+# print(res)
