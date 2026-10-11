@@ -317,3 +317,29 @@ import random
 #     x += dx
 #     y += dy
 # print(res)
+arr  =  [1, 2, 3, 4, 5, 7]
+# print("Reverse array:", arr[::-1])
+# l = len(arr)
+# temp = [0]*l
+# for i in range(l):
+#     temp[i] = arr[l-i-1]
+# for i in range(l):
+#     arr[i] = temp[i]
+# print("Reverse array:", arr)
+# n_arr = len(arr)
+
+# class Solution:
+#     def rev_(self,list,start,end):
+#         if(len(list) == 1):
+#             return list
+#         if(start > end):
+#             return 
+#         list[start],list[end] = list[end],list[start]
+#         start+=1
+#         end-=1
+#         return self.rev_(list,start,end)
+
+#     def reverseArray(self, list):
+#         i = 0
+#         j = len(list) - 1
+#         return self.rev_(list,i,j)
