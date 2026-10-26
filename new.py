@@ -317,7 +317,7 @@ import random
 #     x += dx
 #     y += dy
 # print(res)
-arr  =  [1, 2, 3, 4, 5, 7]
+# arr  =  [1, 2, 3, 4, 5, 7]
 # print("Reverse array:", arr[::-1])
 # l = len(arr)
 # temp = [0]*l
@@ -343,3 +343,55 @@ arr  =  [1, 2, 3, 4, 5, 7]
 #         i = 0
 #         j = len(list) - 1
 #         return self.rev_(list,i,j)
+
+# arr  =  [1, 2, 3, 4, 5, 7]
+# l = len(arr)
+# min = arr[0]
+# max = arr[0]
+# for i in range(l):
+#             if (arr[i]<min):
+#                 min = arr[i]
+#             if (arr[i]>max):
+#                 max = arr[i]
+# print((min,max))
+
+# arr = [1,8,6,2,5,4,7,3,8]
+# left = 0
+# right = len(arr) - 1
+
+# max_area = 0
+# while left < right:
+#     # height = min(arr[left], arr[right])
+#     # width = right - left
+#     # area = height * width
+#     # max_area = max(max_area, area)
+#     max_area  = max(max_area, (min(arr[left], arr[right]) * (right - left)))
+
+#     if arr[left] < arr[right]:
+#         left += 1
+#     else:
+#         right -= 1
+# print("Maximum area:", max_area)
+
+def trapped_water(height):
+    left = 0
+    right = len(height) - 1
+    left_max = height[left]
+    right_max = height[right]
+    water = 0
+
+    while left < right:
+        if left_max < right_max:
+            left += 1
+            left_max = max(left_max, height[left])
+            water += left_max - height[left]
+        else:
+            right -= 1
+            right_max = max(right_max, height[right])
+            water += right_max - height[right]
+
+    return water
+
+
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+print(trapped_water(height))
